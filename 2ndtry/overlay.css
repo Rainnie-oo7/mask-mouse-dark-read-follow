@@ -1,0 +1,29 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Ensure the body and html elements can scroll */
+  }
+  
+  #overlay {
+    position: fixed; /* Use fixed positioning to allow the overlay to stay in place */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Allow clicks to pass through the overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #visibleArea {
+    position: absolute;
+    width: 100%;
+    height: 300px; /* 150px above and 150px below the mouse */
+    pointer-events: none; /* Allow clicks to pass through the visible area */
+    background-color: transparent;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.97); /* Darken the area outside the visible area */
+  }
+  
